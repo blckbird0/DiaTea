@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DiaTea - Čarolija za stabiliziranje šećera u krvi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top red stripe -->
+  <div class="top-stripe" onclick="goToAffiliate()">
+    <span class="product-name">🍵 DiaTea</span>
+  </div>
+
+  <main class="container">
+
+    <!-- Product image -->
+    <img class="product-main" src="https://feleo.net/content/alU8IR13cHzTZs9/img/prod.png" alt="DiaTea Product">
+
+    <h1>DiaTea – Čarolija za stabiliziranje šećera u krvi</h1>
+
+    <p class="subtitle">
+      Kontrola dijabetesa u vašim rukama – prirodni čaj koji normalizira metabolizam i stabilizira šećer u krvi.
+    </p>
+
+    <!-- Countdown -->
+    <div class="countdown">
+      ⏰ Posebna ponuda završava za <span id="timer">15:00</span>
+    </div>
+
+    <!-- Claims -->
+    <ul class="claims">
+      <li>🌿 Povećava aktivnost inzulina</li>
+      <li>💚 Obnavlja jetru i pankreas</li>
+      <li>🍵 Normalizira metabolizam ugljikohidrata</li>
+      <li>❤️ Stabilizira šećer u krvi</li>
+    </ul>
+
+    <!-- Pricing -->
+    <div class="pricing">
+      <span class="discount">💥 50% POPUST SAMO DANAS</span>
+      <div class="prices">
+        <span class="old-price">78 €</span>
+        <span class="new-price">39 €</span>
+      </div>
+      <p class="price-note">
+        Naručite odmah – ograničena ponuda
+      </p>
+    </div>
+
+    <!-- CTA -->
+    <button class="cta" onclick="goToAffiliate()">
+      👉 Naruči DiaTea sada
+    </button>
+
+    <p class="disclaimer">
+      *DiaTea je dodatak prehrani. Rezultati se mogu razlikovati od osobe do osobe.*
+    </p>
+
+  </main>
+
+  <!-- Bottom red stripe -->
+  <div class="bottom-stripe">
+    <span class="offer-text">🔥 Posebna ponuda – SAMO DANAS 🔥</span>
+  </div>
+
+  <!-- Script -->
+  <script>
+    // Referral link
+    const AFFILIATE_URL = "https://hr.diatea.cc/azcuxQGHCR/alU8IR13cHzTZs9/?al=72968&ap=-1&esub=-7EBRQCgQAAAfGpAQDz3IDSnY3CB0B0AYAAw8gG0xpEQ0aEQ0aEQ1CEQ1aA0JSA3Vzf2FkY29tYm__eTJhSklMR1EAA2Q1&site_option=0&target=-7EBNQCgQAAAfGpAQDz3IABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx";
+
+    // Redirect function
+    function goToAffiliate() {
+      window.open(AFFILIATE_URL, "_blank");
+    }
+
+    // Countdown timer
+    let time = 15 * 60; // 15 minutes in seconds
+    const timerEl = document.getElementById("timer");
+
+    function updateTimer() {
+      const m = Math.floor(time / 60);
+      const s = time % 60;
+      timerEl.textContent = `${m}:${s < 10 ? "0" + s : s}`;
+      if (time > 0) time--;
+    }
+
+    // Run every second
+    setInterval(updateTimer, 1000);
+  </script>
+
+</body>
+</html>
