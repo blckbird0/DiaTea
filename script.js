@@ -1,5 +1,5 @@
 // === Affiliate Link ===
-const AFFILIATE_URL = "https://hr.diatea.cc/azcuxQGHCR/alU8IR13cHzTZs9/?al=72968&ap=-1&esub=-7EBRQCgQAAAfGpAQDz3IDSnY3CB0B0AYAAw8gG0xpEQ0aEQ0aEQ1CEQ1aA0JSA3Vzf2FkY29tYm__eTJhSklMR1EAA2Q1&site_option=0&target=-7EBNQCgQAAAfGpAQDz3IABQEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx";
+const AFFILIATE_URL = "https://uh8f8d208auh.axdsz.pro/?rid=-7EBNQCgQAAHA0XAYABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx";
 
 // === CTA Button Redirect ===
 function goToAffiliate() {
@@ -27,4 +27,5 @@ function startCountdown(durationMinutes) {
 }
 
 // Start countdown at 15 minutes
+
 startCountdown(15);
